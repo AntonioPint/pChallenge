@@ -1,0 +1,41 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: 10px 0;
+    background-color: brown;
+    width: 100%;
+    color: white;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#content{
+    margin: 0 auto ;
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+}
+#result{
+    margin-left: 3em;
+    background-color: rgba(122, 176, 247, 0.226);
+    min-height: calc(100vh - 11em);
+    word-wrap: break-word;
+}
+#content > div{
+    border: 1px solid grey;
+    width: 50%;
+    padding: 1em
+}
+.postForm{
+    width:100%;
+    display: flex;
+}
+
+.postForm > input{
+    width:100%;
+
+} 

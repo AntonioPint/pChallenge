@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P_Challenge</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/scripts.js"></script>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Welcome to The Prodsmart Challenge</h1>
+    <div id="content">
+        <div>
+            <h2>GET</h2>
+            <input id="getId" placeholder="Id">
+            <button onclick="getUser()">USER</button>
+            <button onclick="getItem()">ITEM</button>
+            <button onclick="getOrder()">ORDER</button>
+            <button onclick="getStockMovement()">STOCK MOVEMENT</button>
+            <button onclick="getStock()">STOCK</button>
+            <h2>POST</h2>
+            <Label>Add User</Label>
+            <br>
+            <form class="postForm">
+                <input id="addUserName_ID" placeholder="Name">
+                <input id="addUserEmail_ID" placeholder="Email">
+                <button type="button" onclick="postUser()" >SUBMIT</button>
+            </form>
+            <br>
+            <Label>Add Item</Label>
+            <br>
+            <form class="postForm">
+                <input id="addItemName_ID" placeholder="Name">
+                <button type="button" onclick="postItem()" >SUBMIT</button>
+            </form>
+            <br>
+            <Label>Add Order</Label>
+            <br>
+            <form class="postForm">
+                <input id="addOrderUser_ID" placeholder="User Id" >
+                <input id="addOrderItem_ID" placeholder="Item Id" >
+                <input id="addOrderQuantity_ID" placeholder="Quantity" >
+                <input id="addOrderDate_ID" placeholder="Date" type="date">
+                <button type="button" onclick="postOrder()" >SUBMIT</button>
+            </form>
+            <br>
+            <label>Add Stock Movement</label>
+            <br>
+            <form class="postForm">
+                <input id="addStockMItem_ID" placeholder="Item Id" >
+                <input id="addStockMQuantity_ID" placeholder="Quantity" >
+                <input id="addStockMDate_ID" placeholder="Date" type="date">
+                <button type="button" onclick="postStockMovement()" >SUBMIT</button>
+            </form>
+            <br>
+            <h2>TRACE</h2>
+            <input id="traceId" placeholder="id">
+            <button onclick="traceOrder()">ORDER</button>
+            <button onclick="traceStockMovement()">STOCK MOVEMENT</button>
+            <h2>DELETE</h2>
+            <input id="deleteId" placeholder="id">
+            <button onclick="deleteUser()">USER</button>
+            <button onclick="deleteItem()">ITEM</button>
+            <button onclick="deleteOrder()">ORDER</button>
+            <button onclick="deleteStockMovement()">STOCK MOVEMENT</button>
+
+        </div>
+        <div id="result"> </div>
+    </div>
+    <div style="height: 8vh" ></div>
+    <footer>Done by António Carlos Ferreira Pinto - antoniopintotrabalho@gmail.com</footer>
+</body>
+
+</html>
