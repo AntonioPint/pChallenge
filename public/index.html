@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <h1 style="text-align: center;">Welcome to The Prodsmart Challenge</h1>
+    <h1 id="titleheader">Welcome to The Prodsmart Challenge</h1>
     <div id="content">
         <div>
             <h2>GET</h2>
@@ -55,7 +55,46 @@
                 <input id="addStockMDate_ID" placeholder="Date" type="date">
                 <button type="button" onclick="postStockMovement()" >SUBMIT</button>
             </form>
+            <!---->
+            <h2>PUT</h2>
+            <Label>Update User</Label>
             <br>
+            <form class="postForm">
+                <input id="putUser_ID" placeholder="User Id">
+                <input id="putUserName_ID" placeholder="Name">
+                <input id="putUserEmail_ID" placeholder="Email">
+                <button type="button" onclick="putUser()" >SUBMIT</button>
+            </form>
+            <br>
+            <Label>Update Item</Label>
+            <br>
+            <form class="postForm">
+                <input id="putItem_ID" placeholder="Item Id">
+                <input id="putItemName_ID" placeholder="Item Name">
+                <button type="button" onclick="putItem()" >SUBMIT</button>
+            </form>
+            <br>
+            <Label>Update Order</Label>
+            <br>
+            <form class="postForm">
+                <input id="putOrderID" placeholder="Order Id" >
+                <input id="putOrderUser_ID" placeholder="User Id" >
+                <input id="putOrderItem_ID" placeholder="Item Id" >
+                <input id="putOrderQuantity_ID" placeholder="Quantity" >
+                <input id="putOrderDate_ID" placeholder="Date" type="date">
+                <button type="button" onclick="putOrder()" >SUBMIT</button>
+            </form>
+            <br>
+            <label>Update Stock Movement</label>
+            <br>
+            <form class="postForm">
+                <input id="putStockM_ID" placeholder="Stock Movement Id" >
+                <input id="putStockMItem_ID" placeholder="Item Id" >
+                <input id="putStockMQuantity_ID" placeholder="Quantity" >
+                <input id="putStockMDate_ID" placeholder="Date" type="date">
+                <button type="button" onclick="putStockMovement()" >SUBMIT</button>
+            </form>
+            <!---->
             <h2>TRACE</h2>
             <input id="traceId" placeholder="id">
             <button onclick="traceOrder()">ORDER</button>

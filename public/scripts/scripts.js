@@ -221,6 +221,113 @@ function postStockMovement(){
     xmlhttp.send(JSON.stringify(obj));
 }
 
+function putUser(){
+    let item_id = document.getElementById("putUser_ID").value;
+    let name = document.getElementById("putUserName_ID").value;
+    let email = document.getElementById("putUserEmail_ID").value;
+
+    let obj = {name, email};
+
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = () => {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            let str = "";
+            let data = JSON.parse(xmlhttp.response)
+                str += `
+                        MESSAGE> ${data.MESSAGE}<br>
+                        <br>
+                        `
+            ;
+            changeResultText(str)
+        }
+    }
+    xmlhttp.open("PUT", `/api/user/${item_id}`);
+    xmlhttp.setRequestHeader("Content-type", "application/json");
+    xmlhttp.send(JSON.stringify(obj));
+
+}
+
+function putItem(){
+    let item_id = document.getElementById("putItem_ID").value;
+    let name = document.getElementById("putItemName_ID").value;
+
+    let obj = {name};
+
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = () => {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            let str = "";
+            let data = JSON.parse(xmlhttp.response)
+                str += `
+                        MESSAGE> ${data.MESSAGE}<br>
+                        <br>
+                        `
+            ;
+            changeResultText(str)
+        }
+    }
+    xmlhttp.open("PUT", `/api/item/${item_id}`);
+    xmlhttp.setRequestHeader("Content-type", "application/json");
+    xmlhttp.send(JSON.stringify(obj));
+}
+
+function putOrder(){
+    let order_id = document.getElementById("putOrderID").value;
+    let user_id = document.getElementById("putOrderUser_ID").value;
+    let item_id = document.getElementById("putOrderItem_ID").value;
+    let quantity = document.getElementById("putOrderQuantity_ID").value;
+    let date = document.getElementById("putOrderDate_ID").value;
+    
+    let obj = {user_id, item_id, quantity, date};
+
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = () => {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            let str = "";
+            let data = JSON.parse(xmlhttp.response)
+                str += `
+                        MESSAGE> ${data.MESSAGE}<br>
+                        <br>
+                        `
+            ;
+            changeResultText(str)
+        }
+    }
+    xmlhttp.open("PUT", `/api/order/${order_id}`);
+    xmlhttp.setRequestHeader("Content-type", "application/json");
+    xmlhttp.send(JSON.stringify(obj));
+}
+
+function putStockMovement(){
+    let stock_id = document.getElementById("putStockM_ID").value;
+    let item_id = document.getElementById("putStockMItem_ID").value;
+    let quantity = document.getElementById("putStockMQuantity_ID").value;
+    let date = document.getElementById("putStockMDate_ID").value;
+    
+    let obj = {item_id, quantity, date};
+
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = () => {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            let str = "";
+            let data = JSON.parse(xmlhttp.response)
+                str += `
+                        MESSAGE> ${data.MESSAGE}<br>
+                        <br>
+                        `
+            ;
+            changeResultText(str)
+        }
+    }
+    xmlhttp.open("PUT", `/api/stockMovement/${stock_id}`);
+    xmlhttp.setRequestHeader("Content-type", "application/json");
+    xmlhttp.send(JSON.stringify(obj));
+}
+
 function deleteUser(){
     let id = document.getElementById("deleteId").value;
 

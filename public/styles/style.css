@@ -13,6 +13,10 @@ body{
     padding: 0;
 }
 
+#titleheader{
+    text-align: center;
+}
+
 #content{
     margin: 0 auto ;
     display: flex;
